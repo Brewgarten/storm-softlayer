@@ -61,6 +61,7 @@ confidence=
 # --disable=W"
 disable=import-star-module-level,old-octal-literal,oct-method,print-statement,unpacking-in-except,parameter-unpacking,backtick,old-raise-syntax,old-ne-operator,long-suffix,dict-view-method,dict-iter-method,metaclass-assignment,next-method-called,raising-string,indexing-exception,raw_input-builtin,long-builtin,file-builtin,execfile-builtin,coerce-builtin,cmp-builtin,buffer-builtin,basestring-builtin,apply-builtin,filter-builtin-not-iterating,using-cmp-argument,useless-suppression,range-builtin-not-iterating,suppressed-message,no-absolute-import,old-division,cmp-method,reload-builtin,zip-builtin-not-iterating,intern-builtin,unichr-builtin,reduce-builtin,standarderror-builtin,unicode-builtin,xrange-builtin,coerce-method,delslice-method,getslice-method,setslice-method,input-builtin,round-builtin,hex-method,nonzero-method,map-builtin-not-iterating
 
+
 [REPORTS]
 
 # Set the output format. Available formats are text, parseable, colorized, msvs
@@ -139,10 +140,10 @@ name-group=
 include-naming-hint=no
 
 # Regular expression matching correct function names
-function-rgx=([a-z][A-Za-z0-9]{1,40}|(ClassLogger))$
+function-rgx=[a-z_][a-z0-9_]{2,30}$
 
 # Naming hint for function names
-function-name-hint=([a-z][A-Za-z0-9]{1,40}|(ClassLogger))$
+function-name-hint=[a-z_][a-z0-9_]{2,30}$
 
 # Regular expression matching correct variable names
 variable-rgx=_?[a-z][A-Za-z0-9]{1,40}$
@@ -193,10 +194,10 @@ module-rgx=(([a-z_][a-z0-9_]*)|([A-Z][a-zA-Z0-9]+))$
 module-name-hint=(([a-z_][a-z0-9_]*)|([A-Z][a-zA-Z0-9]+))$
 
 # Regular expression matching correct method names
-method-rgx=(_?[a-z][A-Za-z0-9]{1,40})|(__.*__)$
+method-rgx=[a-z_][a-z0-9_]{2,30}$
 
 # Naming hint for method names
-method-name-hint=(_?[a-z][A-Za-z0-9]{1,40})|(__.*__)$
+method-name-hint=[a-z_][a-z0-9_]{2,30}$
 
 # Regular expression which should only match function or class names that do
 # not require a docstring.

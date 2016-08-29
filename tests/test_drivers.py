@@ -29,7 +29,7 @@ def test_list_sizes(driver):
 
 def test_list_volumes(driver):
 
-    if driver.type == "SoftLayerPythonAPI":
+    if driver.type == "sl":
         pytest.skip("SoftLayer does not support working directly with volumes")
 
     for volume in driver.list_volumes():

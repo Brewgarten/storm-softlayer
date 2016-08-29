@@ -1,4 +1,3 @@
-import ConfigParser
 import logging
 import os
 
@@ -12,13 +11,8 @@ logging.basicConfig(format='%(asctime)s [%(levelname)s] [%(name)s(%(filename)s:%
 
 def getSoftLayerDriver():
     import storm.drivers.softlayer
-    if os.path.exists(os.path.expanduser("~/.softlayer")):
-        config = ConfigParser.ConfigParser()
-        config.read(os.path.expanduser("~/.softlayer"))
-        cls = get_driver("SoftLayerPythonAPI")
-        return cls(config.get("softlayer", "username"), config.get("softlayer", "api_key"))
-    else:
-        return None
+    cls = get_driver("sl")
+    return cls.ex_from_config()
 
 @pytest.fixture(scope="module")
 def softlayerDriver():

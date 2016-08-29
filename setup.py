@@ -20,7 +20,7 @@ setup(
     },
     install_requires = [
         "apache-libcloud",
-        "SoftLayer > 4.0"
+        "SoftLayer==5.1"
     ],
     keywords = "python storm cloud",
     license = "IBM",
