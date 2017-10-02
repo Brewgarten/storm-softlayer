@@ -1,3 +1,8 @@
+"""
+Copyright (c) IBM 2015-2017. All Rights Reserved.
+Project name: storm-softlayer
+This project is licensed under the MIT License, see LICENSE
+"""
 import sys
 
 from setuptools import setup, find_packages
@@ -23,7 +28,7 @@ setup(
         "SoftLayer==5.1"
     ],
     keywords = "python storm cloud",
-    license = "IBM",
+    license = "MIT",
     name = "storm-softlayer",
     packages = find_packages(),
     url = "",
